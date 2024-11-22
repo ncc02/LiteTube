@@ -26,8 +26,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        {children}
+        {/* Sử dụng flexbox để tạo layout */}
+        <div className="flex flex-col min-h-screen bg-[#171717]">
+          {/* Navbar cố định ở trên */}
+          <Navbar />
+
+          {/* Phần nội dung chính */}
+          <main className="flex-grow">{children}</main>
+        </div>
       </body>
     </html>
   );
