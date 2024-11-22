@@ -27,13 +27,13 @@ export default function Home() {
   }
 
   if (loading) {
-    return <div className="text-white">Loading...</div>;
+    return <div className="pl-8"><span className="loading loading-bars loading-lg"></span> </div>;
   }
 
 
   return (
-    <div className="sm:px-4 sm:py-0 bg-[#171717]">
-      <div className="grid grid-cols-2 md:grid-cols-6 gap-4 gap-y-4 md:pl-1 pl-2">
+    <div className="flex justify-around bg-[#171717]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
         {videos.map((video) => (
           <Card key={video.id} title={video.title} description={video.description} img={video.thumbnail} />
         ))}
