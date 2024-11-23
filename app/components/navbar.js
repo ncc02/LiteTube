@@ -1,9 +1,11 @@
 'use client'
+import Link from "next/link";
 export default function Navbar() {
     return (
+
       <div className="navbar bg-[#262626] mb-4 shadow-lg">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">LiteTube</a>
+          <Link href="/" className="btn btn-ghost text-xl">LiteTube</Link>
         </div>
         <div className="flex justify-center w-full">
           <div className="form-control">
